@@ -4,6 +4,7 @@ module.exports = {
     // fun index
     index: async (req, res) => {
         //Test 2
+        //Test 4
         //Get All Posts
         const posts = await Post.findAll();
         return res.render("post/index", { posts });
