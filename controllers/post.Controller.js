@@ -3,6 +3,7 @@ const Post = require("../models/Post");
 module.exports = {
     index: async (req, res) => {
         //Test 1
+        //Get All Posts
         const posts = await Post.findAll();
         return res.render("post/index", { posts });
     },
