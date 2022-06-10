@@ -1,6 +1,7 @@
 const Post = require("../models/Post");
 
 module.exports = {
+    // fun index
     index: async (req, res) => {
         //Test 1
         //Get All Posts
