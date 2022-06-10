@@ -1,0 +1,37 @@
+<%- include('../includes/header'); %>
+
+<div class="container">
+    <h2>ALL POST</h2>
+    <a href="/post/create">
+        <button class="btn btn-primary">Create Post</button>
+    </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% posts.forEach(post => { %>
+            <tr>
+                <td><%= post.id %></td>
+                <td><%= post.title %></td>
+                <td><%= post.content %></td>
+                <td>
+                    <a href="/posts/<%= post.id %>/edit">
+                        <button class="btn btn-primary">Edit</button>
+                    </a>
+                    <a href="/posts/<%= post.id %>/delete">
+                        <button class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<%- include('../includes/footer'); %>
