@@ -1,0 +1,31 @@
+<%- include('../includes/header'); %>
+
+<div class="container">
+    <h2>Edit Post <%= post.title %></h2>
+    <form action="/post/<%= post.id %>/update" method="post">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input
+                type="text"
+                class="form-control"
+                id="title"
+                value="<%= post.title %>"
+                name="title"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">Content </label>
+            <textarea
+                type="text"
+                name="content"
+                class="form-control"
+                id="content"
+            >
+<%= post.content %></textarea
+            >
+        </div>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+    </form>
+</div>
+
+<%- include('../includes/footer'); %>
